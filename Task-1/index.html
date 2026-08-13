@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Harshh | Cloud & DevOps Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: #0f172a;
+            border-bottom: 1px solid #1e293b;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        .hero {
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            padding: 70px 8%;
+            background: linear-gradient(135deg, #0f172a, #172554);
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 7px 14px;
+            border: 1px solid #334155;
+            border-radius: 20px;
+            color: #7dd3fc;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 72px);
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            color: #cbd5e1;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            color: #94a3b8;
+            font-size: 17px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 11px 20px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .primary {
+            background: #38bdf8;
+            color: #082f49;
+        }
+
+        .secondary {
+            border: 1px solid #475569;
+            color: #e2e8f0;
+        }
+
+        section {
+            padding: 75px 8%;
+        }
+
+        .section-title {
+            font-size: 30px;
+            margin-bottom: 35px;
+            color: #f8fafc;
+        }
+
+        .section-title span {
+            color: #38bdf8;
+        }
+
+        .about {
+            max-width: 850px;
+            color: #94a3b8;
+            font-size: 16px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background: #1e293b;
+            border: 1px solid #334155;
+            padding: 10px 17px;
+            border-radius: 7px;
+            color: #cbd5e1;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #111c31;
+            border: 1px solid #263449;
+            border-radius: 10px;
+            padding: 25px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #f8fafc;
+        }
+
+        .card p {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .tech {
+            color: #7dd3fc;
+            font-size: 13px;
+        }
+
+        .cloud-box {
+            margin-top: 25px;
+            padding: 25px;
+            background: #111c31;
+            border-left: 4px solid #38bdf8;
+            border-radius: 8px;
+        }
+
+        .cloud-box p {
+            color: #94a3b8;
+            margin-top: 8px;
+        }
+
+        .contact {
+            text-align: center;
+            background: #111827;
+        }
+
+        .contact p {
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .contact a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            border-top: 1px solid #1e293b;
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        @media (max-width: 650px) {
+            nav {
+                padding: 15px 5%;
+            }
+
+            nav ul {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            .hero,
+            section {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Harshh.</div>
+
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero-content">
+
+            <div class="tag">BSc IT Student • Cloud Computing</div>
+
+            <h1>Hi, I'm <span>Harshh</span>.</h1>
+
+            <h2>Building towards Cloud & DevOps.</h2>
+
+            <p>
+                I am a BSc IT student interested in cloud infrastructure,
+                backend systems and DevOps. I enjoy learning by building
+                practical projects and working with modern technologies.
+            </p>
+
+            <div class="buttons">
+                <a class="btn primary" href="#projects">View Projects</a>
+                <a class="btn secondary" href="#contact">Contact Me</a>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- About -->
+    <section id="about">
+        <h2 class="section-title">About <span>Me</span></h2>
+
+        <p class="about">
+            I am currently pursuing a BSc in Information Technology and
+            developing my skills across software development and cloud
+            computing. My current interests include AWS, cloud infrastructure,
+            Linux, APIs, backend development and DevOps practices.
+        </p>
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills">
+        <h2 class="section-title">Technical <span>Skills</span></h2>
+
+        <div class="skills">
+            <div class="skill">AWS</div>
+            <div class="skill">Cloud Computing</div>
+            <div class="skill">Linux</div>
+            <div class="skill">Java</div>
+            <div class="skill">Python</div>
+            <div class="skill">SQL</div>
+            <div class="skill">Spring Boot</div>
+            <div class="skill">REST APIs</div>
+            <div class="skill">Git & GitHub</div>
+            <div class="skill">Postman</div>
+        </div>
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects">
+        <h2 class="section-title">Selected <span>Projects</span></h2>
+
+        <div class="projects">
+
+            <div class="card">
+                <h3>Expense Tracker</h3>
+                <p>
+                    A desktop expense tracking application with a simple
+                    interface and local JSON-based data storage.
+                </p>
+                <div class="tech">Python • Tkinter • JSON</div>
+            </div>
+
+            <div class="card">
+                <h3>Rule-Based Layout Engine</h3>
+                <p>
+                    A Python project that generates valid building layouts
+                    using predefined rules and visualizes the results.
+                </p>
+                <div class="tech">Python • Matplotlib</div>
+            </div>
+
+            <div class="card">
+                <h3>Personal Cloud Storage</h3>
+                <p>
+                    A planned cloud-focused project exploring personal file
+                    storage and cloud infrastructure concepts.
+                </p>
+                <div class="tech">Cloud Computing • Storage</div>
+            </div>
+
+        </div>
+
+
+        <div class="cloud-box">
+            <h3>☁️ Cloud Computing Internship</h3>
+
+            <p>
+                DecodeLabs Cloud Computing Internship — practical work
+                involving AWS S3 static website hosting and AWS EC2
+                server deployment with Nginx.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Let's <span>Connect</span></h2>
+
+        <p>
+            Interested in cloud computing, backend systems and DevOps.
+        </p>
+
+        <a href="mailto:harshvariya255@gmail.com">
+            harshvariya255@gmail.com
+        </a>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        © 2026 Harshh • Cloud Computing Portfolio
+    </footer>
+
+</body>
+</html>
